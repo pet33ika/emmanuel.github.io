@@ -112,5 +112,18 @@ nextBtn.addEventListener('click', () => {
   currentImageIndex = (currentImageIndex === images.length - 1) ? 0 : currentImageIndex + 1;
   newsImage.src = images[currentImageIndex];
 });
+// Sidebar toggle functionality
+const menuToggle = document.getElementById('menu-toggle');
+//const sidebar = document.querySelector('.sidebar');
+const mainContent = document.querySelector('.main-content');
 
-   
+menuToggle.addEventListener('click', () => {
+    sidebar.classList.toggle('active');
+});
+
+// Close sidebar when clicking outside of it
+document.addEventListener('click', (event) => {
+    if (!sidebar.contains(event.target) && !menuToggle.contains(event.target)) {
+        sidebar.classList.remove('active');
+    }
+});
