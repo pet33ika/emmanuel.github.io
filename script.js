@@ -96,7 +96,7 @@ collapseBtn.addEventListener('click', () => {
 });
 
         // News content 
-const images = ['/images/woman.jpg', '/images/man.jpg', '/images/laptop.jpg'];
+const images = ['/emmanuel.github.io/images/woman.jpg', '/emmanuel.github.io/images/man.jpg', '/emmanuel.github.io/images/laptop.jpg'];
 let currentImageIndex = 0;
 
 const newsImage = document.getElementById('news-image');
