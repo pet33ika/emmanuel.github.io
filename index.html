@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Management Dashboard</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+   
+</head>
+<body>
+    <div class="dashboard">
+        <aside class="sidebar">
+            <div class="logo">Full Logo</div>
+            <nav>
+                <ul>
+                    <li class="active"><i class="fa-solid fa-house"></i> <span>Home</span></li>
+                    <li><i class="fa-solid fa-calendar-days"></i><span>Events</span></li>
+                    <li><i class="fa-solid fa-user"></i><span>Speakers</span></li>
+                    <li><i class="fa-regular fa-id-card"></i><span>Reports</span></li>
+                    <li><i class="fa-regular fa-bell"></i><span>Notification</span></li>
+                    <li><i class="fa-regular fa-message"></i><span>Messages</span></li>
+                    <li><i class="fa-solid fa-gears"></i><span>Settings</span></li>
+                    <li id="collapse-btn"><i class="fa-solid fa-backward"></i> <span>Collapse</span></li>
+                    <li id="dark-mode-toggle"><i class="fa-solid fa-toggle-on"></i> <span>Dark Mode</span></li>
+                    <li><i class="fa-solid fa-user"></i><span>Rudra Devi</span></li>
+                </ul>
+            </nav>
+            <div>
+                <li id="collapse-btn"><i></i> <span></span></li>
+                <li id="dark-mode-toggle">
+                    <i></i> <span></span>
+                  </li>
+                  
+            </div>
+            <div style="display: flex; align-items: center; margin-top: 20px;">
+                <img>
+                <div>
+                    <div><span></span></div>
+                    <div style="font-size: 12px; color: #6b7280;"><span></span></div>
+                </div>
+            </div>
+        </aside>
+        <main class="main-content">
+            <div class="header">
+                <h1>Welcome! here's your summary</h1>
+                <div class="user-actions">
+                    <span>Emmanuel Peter Inaku</span>
+                    <button class="icon-button"><i class="fa-regular fa-message"></i></button>
+                    <button class="icon-button"><i class="fa-regular fa-message"></i></button>
+                    <button class="icon-button"><i class="fa-solid fa-user"></i></button>
+                </div>
+            </div>
+            <div class="summary-cards">
+                <div class="card">
+                    <h3>Total Events <span style="color: #6b7280;">ⓘ</span></h3>
+                    <div class="value">100,000</div>
+                    <div class="change positive">+5.0%</div>
+                </div>
+                <div class="card">
+                    <h3>Active Speakers <span style="color: #6b7280;">ⓘ</span></h3>
+                    <div class="value">25</div>
+                    <div class="change negative">-5.0%</div>
+                </div>
+                <div class="card">
+                    <h3>Total Registrations <span style="color: #6b7280;">ⓘ</span></h3>
+                    <div class="value">300</div>
+                    <div class="change positive">+5.0%</div>
+                </div>
+                <div class="card">
+                    <h3>Total Revenue <span style="color: #6b7280;">ⓘ</span></h3>
+                    <div class="value">$500,000</div>
+                    <div class="change positive">+5.0%</div>
+                </div>
+            </div>
+            <div class="chart-news-container">
+                <div class="chart-container">
+                    <h2>Event Registrations per month</h2>
+                    <canvas id="registrationsChart"></canvas>
+                </div>
+                <div class="news-container">
+                    <img src="/images/woman.jpg" alt="Latest News" id="news-image">
+                    <div class="news-content">
+                        <h2>Latest News & Updates</h2>
+                        <p>Turpis interdum nunc verius ornare dignissim pretium. Massa ornare quis atque sed vitae. Sed veli nisi, fermentum erat. Fringilla purus, erat nunc to unclasunt quisque non. Pellentesque in et tellus.</p>
+                    </div>
+                    <button id="prev-btn">◀</button>
+                    <button id="next-btn">▶</button>
+                </div>
+            </div>
+            <div class="events-history">
+                <div class="events-header">
+                    <h2>Events History</h2>
+                    <div class="events-actions">
+                        <span>Displaying 100 results</span>
+                        <select>
+                            <option>Most Recent</option>
+                        </select>
+                        <button class="icon-button">⋮</button>
+                        <button class="icon-button">↓</button>
+                    </div>
+                </div>
+                <div class="search-filter">
+                    <input type="text" placeholder="Search...">
+                    <select><option>Date ▼</option></select>
+                    <select><option>Status ▼</option></select>
+                    <select><option>Name ▼</option></select>
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Event Name</th>
+                            <th>Date</th>
+                            <th>Speaker</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody id="eventsTableBody">
+                        <!-- Table rows will be populated by JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+    
+    <script src="script.js"></script>
