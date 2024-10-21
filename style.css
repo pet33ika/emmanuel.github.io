@@ -40,6 +40,15 @@ body {
     display: flex;
     align-items: center;
     color: #6b7280;
+    text-decoration: none;
+}
+.sidebar li a {
+    margin-bottom: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    color: #6b7280;
+    text-decoration: none;
 }
 .sidebar li {
     margin-bottom: 10px;
@@ -50,7 +59,40 @@ body {
     padding: 6px;
     border-radius: 8px;
     transition: background-color 0.3s ease, color 0.3s ease;
+    text-decoration: none;
 }
+.sidebar li a {
+    margin-bottom: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    color: #6b7280;
+    padding: 6px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    text-decoration: none;
+}
+.events-button {
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 15px;
+    background-color: #f0f0f0;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    text-decoration: none;
+    color: inherit;
+    transition: background-color 0.3s;
+  }
+
+  .events-button:hover {
+    background-color: #724ef3;
+  }
+
+  .events-button i {
+    font-size: 18px;
+  }
 .sidebar li:hover {
     background-color: #f3f4f6;
     color: #4f46e5;
@@ -62,11 +104,22 @@ body {
 .sidebar li.active:hover {
     background-color: #e0e7ff;
 }
+.sidebar li.active:hover a {
+    background-color: #e0e7ff;
+}
 .sidebar li i {
     margin-right: 10px;
     width: 20px;
     text-align: center;
     transition: width 0.3s;
+    text-decoration: none;
+}
+.sidebar li i a {
+    margin-right: 10px;
+    width: 20px;
+    text-align: center;
+    transition: width 0.3s;
+    text-decoration: none;
 }
 .main-content {
     flex-grow: 1;
@@ -117,6 +170,18 @@ h1 {
     font-size: 14px;
     display: flex;
     align-items: center;
+}
+.card {
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.card:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
 }
 .change.positive {
     color: #10b981;

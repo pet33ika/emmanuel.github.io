@@ -1,0 +1,45 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Modal</title>
+    <link rel="stylesheet" href="event.css">
+</head>
+<body>
+    <div class="modal">
+        <span class="close">&times;</span>
+        <h2>Event Name</h2>
+        <div class="date">Event Date</div>
+        <div class="description">Event Description</div>
+        <div class="info">
+            <div class="speakers">
+                <div class="avatar"></div>
+                <div class="avatar"></div>
+                <div class="avatar"></div>
+                <span>3 Guest Speakers</span>
+            </div>
+            <div class="attendees">
+                <span>300 Attendees</span>
+            </div>
+        </div>
+        <div class="buttons">
+            <button class="delete">Delete</button>
+            <button class="complete">Mark as completed</button>
+        </div>
+    </div>
+
+    <script>
+        document.querySelector('.close').addEventListener('click', function() {
+            alert('Close button clicked');
+        });
+
+        document.querySelector('.delete').addEventListener('click', function() {
+            alert('Delete button clicked');
+        });
+
+        document.querySelector('.complete').addEventListener('click', function() {
+            alert('Mark as completed button clicked');
+        });
+    </script>
+</body>
+</html>
